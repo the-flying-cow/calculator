@@ -1,1 +1,27 @@
-# Calculator using Tkinter
+# 🧮 Calculator using Tkinter
+
+This is a basic calculator application built using the **Tkinter** module and **Python**.  
+It supports basic arithmetic operations and has a simple, clean GUI.
+
+---
+
+## Features
+
+- Clean and simple interface  
+- Responsive layout using Tkinter  
+- More features to be added soon!
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.x installed on your system
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/the-flying-cow/calculator.git
+   cd calculator
