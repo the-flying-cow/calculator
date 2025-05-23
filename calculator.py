@@ -34,7 +34,7 @@ B_mul = Button(center_frame,text="*",bg='light gray')
 B_mul.pack(padx=3,pady=3)
 B_mul.grid(row=4,column=2)
 
-B_div= Button(center_frame,text="*",bg='light gray')
+B_div= Button(center_frame,text="/",bg='light gray')
 B_div.pack(padx=3,pady=3)
 B_div.grid(row=4,column=3)
 
