@@ -12,6 +12,10 @@ It supports basic arithmetic operations and has a simple, clean GUI.
 - More features to be added soon!
 
 ---
+## Screenshot
+
+![Calculator Screenshot](calc1.png)
+![Calculator Screenshot](calc2.png)
 
 ## Getting Started
 
