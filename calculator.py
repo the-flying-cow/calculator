@@ -18,15 +18,27 @@ result_screen.pack(expand=True,fill='none')
 
 
 def button_press(symbol):
-	current  = result_screen.get()
-	result_screen.delete(0,END)
-	result_screen.insert(0,current+symbol)
+		current  = result_screen.get()
+		result_screen.delete(0,END)
+		result_screen.insert(0,current+symbol)
 
 def evaluate():
 	value = result_screen.get()
 	result = eval(value)
 	result_screen.delete(0,END)
 	result_screen.insert(0,result)
+
+def handle_keypress(event):
+	char = event.char
+	allowed = '0123456789+-*/.'
+	if char in allowed:
+		button_press(char)
+	elif char == '\r':
+		evaluate()
+	elif char == '\x08':
+		current = result_screen.get()
+		result_screen.delete(0,END)
+		result_screen.insert(0,current[:-1])
 
 num=1
 for i in range(3):
@@ -38,13 +50,14 @@ for i in range(3):
 		B1 = Button(frame,relief=RAISED,bg='black',text=f"{num}",fg='white',height=1,width=3,command=lambda n=num_str:button_press(n))
 		B1.pack(padx=2,pady=2,expand=True)
 		num = num+1
-
+B_0 = Button(center_frame,relief=RAISED,bg='gray',text="0",fg='white',height=1,width=3,command=lambda n="0":button_press(n))
+B_0.grid(row=0,column=3)
 
 B2 = Button(center_frame,text="=",bg='orange',command=lambda: evaluate())
 B2.grid(row=2,column=3)
 
-B3 = Button(center_frame,text="CLR",bg='sky blue',command=lambda: result_screen.delete(0,END))
-B3.grid(row=0,column=3)
+B3 = Button(center_frame,text="CLR",bg='sky blue',command=lambda: result_screen.delete(0,END),padx=5,pady=5)
+B3.grid(row=2,column=4)
 
 B_add = Button(center_frame,text="+",bg='light gray',command=lambda: button_press("+"))
 B_add.grid(row=4,column=0)
@@ -60,5 +73,7 @@ B_div.grid(row=4,column=3)
 
 B_dec= Button(center_frame,text=".",bg='light gray',command=lambda: button_press("."))
 B_dec.grid(row=1,column=3)
+
+win.bind("<Key>",handle_keypress)
 
 win.mainloop()
