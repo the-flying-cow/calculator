@@ -4,7 +4,7 @@ from tkinter import *
 win = Tk()
 win.title('Calculator')
 
-center_frame = Frame(win,bg='light gray',width=300,height=300)
+center_frame = Frame(win,bg='light gray',width=300,height=300,bd=5,relief=RIDGE)
 center_frame.pack(expand=True)
 center_frame.pack_propagate(False)
 
@@ -14,7 +14,7 @@ result_frame.pack_propagate(False)
 result_frame.place(x=680,y=250)
 
 result_screen = Entry(result_frame,fg='white',bg='black',bd=10)
-result_screen.pack(expand=True,fill='none')
+result_screen.pack(expand=True)
 
 
 def button_press(symbol):
