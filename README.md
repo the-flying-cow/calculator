@@ -1,6 +1,6 @@
 # 🧮 Calculator using Tkinter
 
-This is a basic calculator application that I am working on and it is built using the **Tkinter** module and **Python**.  
+This is a basic calculator application that I have built using the **Tkinter** module and **Python**.  
 It supports basic arithmetic operations and has a simple, clean GUI.
 
 ---
