@@ -1,4 +1,4 @@
-# 🧮 Calculator using Tkinter
+# calculator
 
 This is a basic calculator application that I have built using the **Tkinter** module and **Python**.  
 It supports basic arithmetic operations and has a simple, clean GUI.
